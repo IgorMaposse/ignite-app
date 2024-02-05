@@ -42,7 +42,7 @@ Route::get('/', function () {return redirect('/dashboard');})->middleware('auth'
     //Recursos Humanos
     //Route::get('/human-resources', [HumanResourcesController::class, 'index'])->name('human-resources.index');
 
-
+    //Route::post('/user-create', [UserProfileController::class, 'store'])->name('user-create.store');
 
 	Route::post('/user-create', [UserProfileController::class, 'store'])->name('user-create.store');
     Route::get('/user-managment', [TesteController::class, 'index'])->middleware('auth')->name('user-managment');

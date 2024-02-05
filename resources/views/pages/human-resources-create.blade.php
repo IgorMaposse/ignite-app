@@ -123,11 +123,11 @@
                                 </div>
                             </div>
                             <hr class="horizontal dark">
-                            <p class="text-uppercase text-sm">Sobre mim</p>
+                            <p class="text-uppercase text-sm">Sobre o Colaborador</p>
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="form-group">
-                                        <label for="example-text-input" class="form-control-label">Sobre mim</label>
+                                        <label for="example-text-input" class="form-control-label">Cargo/Titulo</label>
                                         <input class="form-control" type="text" name="about"
                                             value="">
                                     </div>
@@ -137,7 +137,7 @@
                     </form>
                 </div>
             </div>
-       
+
         </div>
         @include('layouts.footers.auth.footer')
     </div>

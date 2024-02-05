@@ -10,7 +10,7 @@
                     <div class="card-header pb-0">
                         <div class="d-flex align-items-center">
 
-                            <a href="{{ route('page', ['page' => 'user-management-create']) }}" class="btn btn-primary btn-sm ms-auto">Adicionar</a>
+                            <a href="{{ route('page', ['page' => 'human-resources-create']) }}" class="btn btn-primary btn-sm ms-auto">Adicionar colaborador</a>
                         </div>
                     </div>
                     <div class="card-header pb-0">
