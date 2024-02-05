@@ -34,22 +34,13 @@ class UserProfileController extends Controller
         $user->about=$request->about;
 
         $user->save();
-        
-        return redirect('/user-management')->with('succes','Usuario criado com Sucesso');
+
+        $users=User::all();
+        return view('user-managment', ['users'=>$users])->with('succes','Usuario criado com Sucesso');
     }
+
+
     public function show()
-
-
-
-
-
-
-
-
-
-
-
-
     {
         return view('pages.user-profile');
     }
