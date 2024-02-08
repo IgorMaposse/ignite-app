@@ -7,7 +7,7 @@
             <div class="row gx-4">
                 <div class="col-auto">
                     <div class="avatar avatar-xl position-relative">
-                        <img src="/img/team-1.jpg" alt="profile_image" class="w-100 border-radius-lg shadow-sm">
+                        <img src="/img/teste.jpeg" alt="profile_image" class="w-100 border-radius-lg shadow-sm">
                     </div>
                 </div>
                 <div class="col-auto my-auto">
@@ -182,16 +182,16 @@
                         </div>
                         <div class="text-center mt-4">
                             <h5>
-                                Mark Davis<span class="font-weight-light">, 35</span>
+                                Delson<span class="font-weight-light">, 35</span>
                             </h5>
                             <div class="h6 font-weight-300">
-                                <i class="ni location_pin mr-2"></i>Bucharest, Romania
+                                <i class="ni location_pin mr-2"></i>Mozambique, Maputo
                             </div>
                             <div class="h6 mt-4">
-                                <i class="ni business_briefcase-24 mr-2"></i>Solution Manager - Creative Tim Officer
+                                <i class="ni business_briefcase-24 mr-2"></i>Solution Manager
                             </div>
                             <div>
-                                <i class="ni education_hat mr-2"></i>University of Computer Science
+                                <i class="ni education_hat mr-2"></i>Safeline
                             </div>
                         </div>
                     </div>

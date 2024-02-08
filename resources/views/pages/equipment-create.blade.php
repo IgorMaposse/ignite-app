@@ -57,82 +57,38 @@
         <div class="row">
             <div class="col-md-8">
                 <div class="card">
-                    <form role="form" method="POST" action={{ route('user-create.store') }} enctype="multipart/form-data">
+                    <form role="form" method="POST" action={{ route('equipment-create.store') }} enctype="multipart/form-data">
                         @csrf
                         <div class="card-header pb-0">
                             <div class="d-flex align-items-center">
-                                <p class="mb-0">Criar Colaborador</p>
-                                <button type="submit" class="btn btn-primary btn-sm ms-auto">Criar</button>
+                                <p class="mb-0">Adicionar Equipamento</p>
+                                <button type="submit" class="btn btn-primary btn-sm ms-auto">Gravar Aquipamento</button>
                             </div>
                         </div>
                         <div class="card-body">
-                            <p class="text-uppercase text-sm">Informação do Usuário</p>
+                            <p class="text-uppercase text-sm">Informação</p>
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label for="example-text-input" class="form-control-label">Username</label>
-                                        <input class="form-control" type="text" name="username" value="">
+                                        <label for="example-text-input" class="form-control-label">Nome</label>
+                                        <input class="form-control" type="text" name="name" value="">
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label for="example-text-input" class="form-control-label">Email</label>
-                                        <input class="form-control" type="email" name="email" value="">
+                                        <label for="example-text-input" class="form-control-label">Codigo</label>
+                                        <input class="form-control" type="cod" name="cod" value="">
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label for="example-text-input" class="form-control-label">Primeiro Nome</label>
-                                        <input class="form-control" type="text" name="firstname"  value="">
+                                        <label for="image">Image do Evento:</label>
+                                        <input type="file" class="form-control-file" id="image" name="image">
                                     </div>
                                 </div>
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label for="example-text-input" class="form-control-label">Ultimo Nome</label>
-                                        <input class="form-control" type="text" name="lastname" value="">
-                                    </div>
-                                </div>
+
                             </div>
-                            <hr class="horizontal dark">
-                            <p class="text-uppercase text-sm">Contactos</p>
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <div class="form-group">
-                                        <label for="example-text-input" class="form-control-label">Endereço</label>
-                                        <input class="form-control" type="text" name="address"
-                                            value="">
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="form-group">
-                                        <label for="example-text-input" class="form-control-label">Cidade</label>
-                                        <input class="form-control" type="text" name="city" value="">
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="form-group">
-                                        <label for="example-text-input" class="form-control-label">Pais</label>
-                                        <input class="form-control" type="text" name="country" value="">
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="form-group">
-                                        <label for="example-text-input" class="form-control-label">Codigo Postal</label>
-                                        <input class="form-control" type="text" name="postal" value="">
-                                    </div>
-                                </div>
-                            </div>
-                            <hr class="horizontal dark">
-                            <p class="text-uppercase text-sm">Sobre o Colaborador</p>
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <div class="form-group">
-                                        <label for="example-text-input" class="form-control-label">Cargo/Titulo</label>
-                                        <input class="form-control" type="text" name="about"
-                                            value="">
-                                    </div>
-                                </div>
-                            </div>
+
                         </div>
                     </form>
                 </div>

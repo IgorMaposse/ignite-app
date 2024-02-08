@@ -21,7 +21,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\LoginController;
-use App\Http\Controllers\HumanResourcesController;
+use App\Http\Controllers\EquipmentController;
 use App\Http\Controllers\TesteController;
 use App\Http\Controllers\UserProfileController;
 use App\Http\Controllers\ResetPassword;
@@ -46,6 +46,12 @@ Route::get('/', function () {return redirect('/dashboard');})->middleware('auth'
 
 	Route::post('/user-create', [UserProfileController::class, 'store'])->name('user-create.store');
     Route::get('/user-managment', [TesteController::class, 'index'])->middleware('auth')->name('user-managment');
+
+    //Equipamentos
+    Route::post('/equipment-create', [EquipmentController::class, 'store'])->name('equipment-create.store');
+    Route::get('/equipment', [EquipmentController::class, 'index'])->name('equipment.index');
+    Route::get('/equipment-edit/{id}', [EquipmentController::class, 'edit'])->name('equipment.edit');
+    Route::put('/equipment-update/{id}', [EquipmentController::class, 'update'])->name('equipment.update');
 
 
 	Route::group(['middleware' => 'auth'], function () {

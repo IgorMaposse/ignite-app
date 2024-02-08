@@ -27,6 +27,7 @@ class ColaboradorController extends Controller
 
         $colaborator=Colaborador::all();
 
+
         //return view('user-managment', ['users'=>$users])->with('succes','Usuario criado com Sucesso');
     }
 

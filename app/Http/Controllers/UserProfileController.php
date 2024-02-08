@@ -6,8 +6,6 @@ use Illuminate\Http\Request;
 use Illuminate\Validation\Rule;
 use App\Models\User;
 class UserProfileController extends Controller
-
-
 {
 
 
@@ -36,7 +34,7 @@ class UserProfileController extends Controller
         $user->save();
 
         $users=User::all();
-        return view('user-managment', ['users'=>$users])->with('succes','Usuario criado com Sucesso');
+        return redirect('pages.user-managment', ['users'=>$users])->with('succes','Usuario criado com Sucesso');
     }
 
 
@@ -70,6 +68,6 @@ class UserProfileController extends Controller
             'postal' => $request->get('postal'),
             'about' => $request->get('about')
         ]);
-        return back()->with('succes', 'Profile succesfully updated');
+        return back()->with('succes', 'Perfil do Usuario Actualizado com Sucesso');
     }
 }
