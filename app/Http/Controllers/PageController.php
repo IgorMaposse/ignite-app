@@ -20,6 +20,14 @@ class PageController extends Controller
 
         return abort(404);
     }
+    public function indexx(string $page, string $id)
+    {
+        if (view()->exists("pages.{$page}.{$id}")) {
+            return view("pages.{$page}.{$id}");
+        }
+
+        return abort(404);
+    }
 
     public function vr()
     {

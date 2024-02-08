@@ -38,11 +38,6 @@ class EquipmentController extends Controller
             $requestImage->move(public_path('img/logos'), $imageName);
             $equipment->image = $imageName;
         }
-
-        //$user=auth()->user();
-        //$event->user_id=$user->id;
-
-
         $equipment->save();
         $equipments=Equipment::all();
         return view('pages.equipment', ['equipments'=>$equipments])->with('succes', 'Equipamento adicionado com Sucesso');

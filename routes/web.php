@@ -63,5 +63,6 @@ Route::get('/', function () {return redirect('/dashboard');})->middleware('auth'
 	Route::get('/sign-in-static', [PageController::class, 'signin'])->name('sign-in-static');
 	Route::get('/sign-up-static', [PageController::class, 'signup'])->name('sign-up-static');
 	Route::get('/{page}', [PageController::class, 'index'])->name('page');
+    Route::get('/{page}/{id}', [PageController::class, 'indexx'])->name('pageId');
 	Route::post('logout', [LoginController::class, 'logout'])->name('logout');
 });

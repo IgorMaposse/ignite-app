@@ -56,6 +56,7 @@
                                             <div class="d-flex px-3 py-1 justify-content-center align-items-center">
                                              <div class="text-sm font-weight-bold mb-0 ps-2">
                                                <a href="{{ route('page', ['page' => 'equipment-edit', 'id' => $equipment->id]) }}">Edit</a>
+                                               <a href="{{ route('equipment.edit', ['id' => $equipment->id]) }}">Edit</a>
                                             </div>
 
 
