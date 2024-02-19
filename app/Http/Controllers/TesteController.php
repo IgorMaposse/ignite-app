@@ -9,9 +9,10 @@ class TesteController extends Controller
 {
     //
 
-    public function index()
-    {
+    public function list(){
+
         $users=User::all();
-        return view('user-managment', ['users'=>$users]);
+        return view('pages.human-resources')->with(compact('users'));
     }
+
 }

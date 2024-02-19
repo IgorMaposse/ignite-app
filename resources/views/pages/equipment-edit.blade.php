@@ -57,8 +57,9 @@
         <div class="row">
             <div class="col-md-8">
                 <div class="card">
+
                     @isset($equipment)
-                    <form role="form" method="POST" action="/equipment-update/{{$equipment->id}}" enctype="multipart/form-data">
+                    <form role="form" method="POST" action="{{ route('equipment-update', ['id' => $equipment->id]) }}" enctype="multipart/form-data">
                         @csrf
                         @method('PUT')
                         <div class="card-header pb-0">
@@ -73,30 +74,31 @@
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label for="example-text-input" class="form-control-label">Nome</label>
-                                        <input class="form-control" type="text" name="name" value="{{$equipment->name}}">
+                                        <input class="form-control" type="text" name="name" value="{{$equipment1->name}}">
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label for="example-text-input" class="form-control-label">Codigo</label>
-                                        <input class="form-control" type="cod" name="cod" value="{{$equipment->cod}}">
+                                        <input class="form-control" type="cod" name="cod" value="">
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label for="image">Imagem:</label>
                                         <input type="file" class="form-control-file" id="image" name="image">
-                                        <img src="img/logos/{{$equipment->image}}" alt="{{$equipment->name}}" class="img-preview">
+                                        <img src="" alt="" class="img-preview">
                                     </div>
                                 </div>
 
                             </div>
 
                         </div>
-                        @else
-                        <p>Equipment not found.</p>
-                        @endisset
+
                     </form>
+                    @else
+                    <p>Equipment not found.</p>
+                    @endisset
                 </div>
             </div>
 

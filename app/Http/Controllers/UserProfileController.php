@@ -34,7 +34,9 @@ class UserProfileController extends Controller
         $user->save();
 
         $users=User::all();
-        return redirect('pages.user-managment', ['users'=>$users])->with('succes','Usuario criado com Sucesso');
+        //return view('pages.user-management')->with(compact('users'))->with('success', 'Usuário criado com sucesso');
+        return view('pages.human-resources')->with(compact('users'));
+
     }
 
 
@@ -55,6 +57,7 @@ class UserProfileController extends Controller
             'country' => ['max:100'],
             'postal' => ['max:100'],
             'about' => ['max:255']
+
         ]);
 
         auth()->user()->update([

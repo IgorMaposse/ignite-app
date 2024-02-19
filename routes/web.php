@@ -42,18 +42,21 @@ Route::get('/', function () {return redirect('/dashboard');})->middleware('auth'
     //Recursos Humanos
     //Route::get('/human-resources', [HumanResourcesController::class, 'index'])->name('human-resources.index');
 
+    //Route:u
     //Route::post('/user-create', [UserProfileController::class, 'store'])->name('user-create.store');
 
 	Route::post('/user-create', [UserProfileController::class, 'store'])->name('user-create.store');
     Route::get('/user-managment', [TesteController::class, 'index'])->middleware('auth')->name('user-managment');
 
+    Route::get('/human-resources', [TesteController::class, 'list']);
+
     //Equipamentos
     Route::post('/equipment-create', [EquipmentController::class, 'store'])->name('equipment-create.store');
     Route::get('/equipment', [EquipmentController::class, 'index'])->name('equipment.index');
-    Route::get('/equipment-edit/{id}', [EquipmentController::class, 'edit'])->name('equipment.edit');
+    Route::get('/equipment-edit/{id}', [EquipmentController::class, 'edit'])->name('equipment-edit');
     Route::put('/equipment-update/{id}', [EquipmentController::class, 'update'])->name('equipment.update');
 
-
+//ou
 	Route::group(['middleware' => 'auth'], function () {
 	Route::get('/virtual-reality', [PageController::class, 'vr'])->name('virtual-reality');
 	Route::get('/rtl', [PageController::class, 'rtl'])->name('rtl');

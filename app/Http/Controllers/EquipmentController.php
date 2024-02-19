@@ -7,7 +7,6 @@ use App\Models\Equipment;
 class EquipmentController extends Controller
 {
     //
-
     public function index(){
 
 
@@ -43,13 +42,30 @@ class EquipmentController extends Controller
         return view('pages.equipment', ['equipments'=>$equipments])->with('succes', 'Equipamento adicionado com Sucesso');
 
     }
-    public function edit($id){
 
+    public function editt($id){
 
+        $equipments=Equipment::all();
         $equipment=Equipment::findOrFail($id);
 
-        return view('pages.equipment-edit', ['equipment'=>$equipment]);
+        return view('pages.equipment-edit', ['equipments'=>$equipments])->with(compact('equipment'));
     }
+
+    public function edit(Request $request, $id)
+{
+    // Use $request to get the 'id' parameter from the query parameters
+    $equipmentId = $request->query('id');
+
+    // Assuming you have a variable named $equipmentId to store the retrieved id
+    $equipment = Equipment::findOrFail($equipmentId);
+    $equipment1 = Equipment::findOrFail($id);
+
+    // You might want to remove the line below unless you have a specific reason for fetching all equipments
+    // $equipments = Equipment::all();
+    dd($equipment);
+
+    return view('pages.equipment-edit',compact('equipment','equipment1'));
+}
 
 
     public function list(){
