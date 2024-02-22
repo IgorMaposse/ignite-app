@@ -14,15 +14,15 @@
                         </div>
                     </div>
                     <div class="card-header pb-0">
-                        <h6>Lista de Equipamentos</h6>
+                        <h6>Lista de Equipamentos em Stock</h6>
                     </div>
                     <div class="card-body px-0 pt-0 pb-2">
                         <div class="table-responsive p-0">
                             <table class="table align-items-center mb-0">
                                 <thead>
                                     <tr>
-                                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Name</th>
-                                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Role
+                                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Nome</th>
+                                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Quantidade
                                         </th>
                                         <th
                                             class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
@@ -57,18 +57,80 @@
                                              <div class="text-sm font-weight-bold mb-0 ps-2">
                                                 <!--<a href="{{ route('page', ['page' => 'equipment-edit']) }}">Edit</a>-->
                                                <a class="nav-link {{ str_contains(request()->url(), 'tables') == true ? 'active' : '' }}" href="{{ route('page', ['page' => 'equipment-edit','id'=>$equipment->id ]) }}">
-                                                <div
-                                                    class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
-                                                    <i class="ni ni-calendar-grid-58 text-warning text-sm opacity-10"></i>
-                                                </div>
-                                                <span class="nav-link-text ms-1">Edit</span>
+
+                                                <span class="nav-link-text ms-1">Editar</span>
                                             </a>
                                             </div>
 
 
                                                 <div class="text-sm font-weight-bold mb-0 ps-2">
-                                                    <a   href="">Deletar</a>
-                                                    </div>
+                                                    <a   href="">Apagar</a>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                @endforeach
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="alert alert-light" role="alert">
+                        Lista de Equipamentos Requisitados
+
+                    </div>
+
+                    <div class="card-body px-0 pt-0 pb-2">
+                        <div class="table-responsive p-0">
+                            <table class="table align-items-center mb-0">
+                                <thead>
+                                    <tr>
+                                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Nome</th>
+                                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Quantidade
+                                        </th>
+                                        <th
+                                            class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+                                            Create Date</th>
+                                        <th
+                                            class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+                                            Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+
+                                @foreach ($equipments as $equipment)
+                                    <tr>
+                                        <td>
+                                            <div class="d-flex px-3 py-1">
+                                                <div>
+                                                    <img src="./img/logos/{{$equipment->image}}" class="avatar me-3" alt="image">
+                                                </div>
+                                                <div class="d-flex flex-column justify-content-center">
+                                                    <h6 class="mb-0 text-sm">{{$equipment->name}}</h6>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <p class="text-sm font-weight-bold mb-0">{{$equipment->cod}}</p>
+                                        </td>
+                                        <td class="align-middle text-center text-sm">
+                                            <p class="text-sm font-weight-bold mb-0">{{$equipment->created_at}}</p>
+                                        </td>
+                                        <td class="align-middle text-end">
+                                            <div class="d-flex px-3 py-1 justify-content-center align-items-center">
+                                             <div class="text-sm font-weight-bold mb-0 ps-2">
+                                                <!--<a href="{{ route('page', ['page' => 'equipment-edit']) }}">Edit</a>-->
+                                               <a class="nav-link {{ str_contains(request()->url(), 'tables') == true ? 'active' : '' }}" href="{{ route('page', ['page' => 'equipment-edit','id'=>$equipment->id ]) }}">
+
+                                                <span class="nav-link-text ms-1">Editar</span>
+                                            </a>
+                                            </div>
+
+
+                                                <div class="text-sm font-weight-bold mb-0 ps-2">
+                                                    <a   href="">Apagar</a>
+                                                </div>
                                             </div>
                                         </td>
                                     </tr>

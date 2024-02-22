@@ -66,12 +66,12 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link {{ str_contains(request()->url(), 'tables') == true ? 'active' : '' }}" href="{{ route('page', ['page' => 'tables']) }}">
+                <a class="nav-link {{ str_contains(request()->url(), 'tables') == true ? 'active' : '' }}" href="{{ route('page', ['page' => 'team']) }}">
                     <div
                         class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
                         <i class="ni ni-calendar-grid-58 text-warning text-sm opacity-10"></i>
                     </div>
-                    <span class="nav-link-text ms-1">FAQs</span>
+                    <span class="nav-link-text ms-1">Gestão de Equipe</span>
                 </a>
             </li>
             <li class="nav-item">
@@ -101,7 +101,7 @@
                     <span class="nav-link-text ms-1">Legal & Complience</span>
                 </a>
             </li>
-            <li class="nav-item">
+           <!-- <li class="nav-item">
                 <a class="nav-link {{ Route::currentRouteName() == 'virtual-reality' ? 'active' : '' }}" href="{{ route('virtual-reality') }}">
                     <div
                         class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
@@ -135,7 +135,7 @@
                     </div>
                     <span class="nav-link-text ms-1">RTL</span>
                 </a>
-            </li>
+            </li>-->
             <li class="nav-item mt-3">
                 <h6 class="ps-4 ms-2 text-uppercase text-xs font-weight-bolder opacity-6">Detalhes da Conta</h6>
             </li>

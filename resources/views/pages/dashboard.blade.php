@@ -10,12 +10,12 @@
                         <div class="row">
                             <div class="col-8">
                                 <div class="numbers">
-                                    <p class="text-sm mb-0 text-uppercase font-weight-bold">Clientes do mês</p>
+                                    <p class="text-sm mb-0 text-uppercase font-weight-bold">Ignite</p>
                                     <h5 class="font-weight-bolder">
                                         26
                                     </h5>
                                     <p class="mb-0">
-                                        <span class="text-success text-sm font-weight-bolder">+55%</span>
+                                        <span class="text-success text-sm font-weight-bolder">+2%</span>
                                         Desde o último mês
                                     </p>
                                 </div>
@@ -35,9 +35,9 @@
                         <div class="row">
                             <div class="col-8">
                                 <div class="numbers">
-                                    <p class="text-sm mb-0 text-uppercase font-weight-bold">Total de Apolices</p>
+                                    <p class="text-sm mb-0 text-uppercase font-weight-bold">Impen</p>
                                     <h5 class="font-weight-bolder">
-                                        2,300
+                                       21
                                     </h5>
                                     <p class="mb-0">
                                         <span class="text-success text-sm font-weight-bolder">+3%</span>
@@ -60,7 +60,7 @@
                         <div class="row">
                             <div class="col-8">
                                 <div class="numbers">
-                                    <p class="text-sm mb-0 text-uppercase font-weight-bold">Total de Resgates</p>
+                                    <p class="text-sm mb-0 text-uppercase font-weight-bold">Safeline</p>
                                     <h5 class="font-weight-bolder">
                                         16
                                     </h5>
@@ -85,9 +85,9 @@
                         <div class="row">
                             <div class="col-8">
                                 <div class="numbers">
-                                    <p class="text-sm mb-0 text-uppercase font-weight-bold">Valor total Recebido</p>
+                                    <p class="text-sm mb-0 text-uppercase font-weight-bold">MuviCapital</p>
                                     <h5 class="font-weight-bolder">
-                                        10,960mt
+                                      1
                                     </h5>
                                     <p class="mb-0">
                                         <span class="text-success text-sm font-weight-bolder">+5%</span>Desde o último mês
